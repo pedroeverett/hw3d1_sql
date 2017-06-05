@@ -52,11 +52,15 @@ INSERT INTO movies (title, year, show_time) VALUES ('Captain America: Civil War'
 INSERT INTO movies (title, year, show_time) VALUES ('Doctor Strange', 2016, '21:30');
 
 -- 1. Return ALL the data in the 'movies' table.
-  SELECT * FROM movies;
+SELECT * FROM movies;
 -- 2. Return ONLY the name column from the 'people' table
+SELECT name FROM people;
 -- 3. Oops! Someone at CodeClan spelled James' name wrong! Change it to reflect the proper spelling (change 'Jasmse Cox' to 'James Cox').
+UPDATE people SET name = 'James Cox' WHERE name = 'Jasmse Cox';
 -- 4. Return ONLY your name from the 'people' table.
+SELECT name FROM people WHERE name = 'Pedro Everett';
 -- 5. The cinema is showing 'Batman Begins', but Batman is DC, not Marvel! Delete the entry from the 'movies' table.
+DELETE FROM movies WHERE title = 'Batman Begins';
 -- 6. Create a new entry in the 'people' table with the name of one of the instructors.
 -- 7. Winston Ingram, has decided to hijack our movie evening, Remove him from the table of people.
 -- 8. Somehow the list of people includes two people named 'Fred'. Change these entries to the proper names ('Jack Jarvis', 'Victor McDade')
